@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_1">4dp</dimen>
+    <dimen name="spacing_2">8dp</dimen>
+    <dimen name="spacing_3">12dp</dimen>
+    <dimen name="spacing_4">16dp</dimen>
+    <dimen name="spacing_6">24dp</dimen>
+    <dimen name="spacing_8">32dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_xs">12sp</dimen>
+    <dimen name="text_sm">14sp</dimen>
+    <dimen name="text_base">16sp</dimen>
+    <dimen name="text_lg">18sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_2xl">24sp</dimen>
+    <dimen name="text_3xl">30sp</dimen>
+    <dimen name="text_4xl">36sp</dimen>
+    <dimen name="text_5xl">48sp</dimen>
+    
+    <!-- Border Radius -->
+    <dimen name="radius_sm">4dp</dimen>
+    <dimen name="radius_md">6dp</dimen>
+    <dimen name="radius_lg">8dp</dimen>
+    <dimen name="radius_xl">12dp</dimen>
+    <dimen name="radius_2xl">16dp</dimen>
+    <dimen name="radius_3xl">24dp</dimen>
+    <dimen name="radius_full">9999dp</dimen>
+    
+    <!-- Elevation -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+    <dimen name="elevation_xl">12dp</dimen>
+    <dimen name="elevation_2xl">16dp</dimen>
+    
+    <!-- Button Sizes -->
+    <dimen name="button_height_small">40dp</dimen>
+    <dimen name="button_height_medium">48dp</dimen>
+    <dimen name="button_height_large">56dp</dimen>
+    
+    <!-- Icon Sizes -->
+    <dimen name="icon_button_size">40dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">20dp</dimen>
+    <dimen name="icon_size_large">24dp</dimen>
+    
+    <!-- Game Board -->
+    <dimen name="cell_size">32dp</dimen>
+    <dimen name="cell_gap">1dp</dimen>
+    <dimen name="block_cell_size">24dp</dimen>
+</resources>

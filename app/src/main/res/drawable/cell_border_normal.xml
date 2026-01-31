@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Normal cell border - thin gray line on right and bottom -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    
+    <!-- Right border - thin gray -->
+    <item android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_200" />
+        </shape>
+    </item>
+    
+    <!-- Bottom border - thin gray -->
+    <item android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_200" />
+        </shape>
+    </item>
+</layer-list>

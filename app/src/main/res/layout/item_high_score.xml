@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- High Score List Item -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scoreCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_3"
+    app:cardCornerRadius="@dimen/radius_xl"
+    app:cardElevation="@dimen/elevation_md"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_4"
+        android:gravity="center_vertical">
+
+        <!-- Rank Icon/Number -->
+        <FrameLayout
+            android:id="@+id/rankContainer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/spacing_4">
+
+            <!-- Medal/Trophy Background (for top 3) -->
+            <FrameLayout
+                android:id="@+id/medalBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgMedal"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_trophy"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/rank_medal" />
+
+            </FrameLayout>
+
+            <!-- Number Background (for rank 4+) -->
+            <TextView
+                android:id="@+id/txtRankNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/text_xl"
+                android:textColor="@color/gray_600"
+                android:textStyle="bold"
+                android:background="@drawable/circle_gray"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- Score Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8,950"
+                android:textSize="@dimen/text_2xl"
+                android:textColor="@color/gray_800"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2026.01.30"
+                android:textSize="@dimen/text_xs"
+                android:textColor="@color/gray_600" />
+
+        </LinearLayout>
+
+        <!-- Best Record Badge (only for rank 1) -->
+        <TextView
+            android:id="@+id/txtBestBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/spacing_3"
+            android:paddingVertical="@dimen/spacing_1"
+            android:text="@string/best_record"
+            android:textSize="@dimen/text_xs"
+            android:textColor="@color/orange_600"
+            android:textStyle="bold"
+            android:background="@drawable/badge_best_record"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

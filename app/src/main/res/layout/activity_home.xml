@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_main_bg"
+    android:padding="@dimen/spacing_6"
+    android:id="@+id/home">
+
+    <!-- Logo Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/radius_3xl"
+        app:cardElevation="@dimen/elevation_2xl"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.35">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_6"
+            app:columnCount="3"
+            app:rowCount="3">
+
+            <!-- 9 blocks for logo -->
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_purple"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_purple"
+                app:layout_column="1"
+                app:layout_row="1" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="0"
+                app:layout_row="2" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_gray"
+                app:layout_column="1"
+                app:layout_row="2" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_block_purple"
+                app:layout_column="2"
+                app:layout_row="2" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_korean"
+        android:textSize="@dimen/text_4xl"
+        android:textColor="@color/gray_800"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/logoCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/txtAppSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_subtitle"
+        android:textSize="@dimen/text_sm"
+        android:textColor="@color/gray_600"
+        android:layout_marginTop="@dimen/spacing_2"
+        app:layout_constraintTop_toBottomOf="@id/txtAppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Start Game Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartGame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_large"
+            android:text="@string/start_game"
+            android:textSize="@dimen/text_lg"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_button_primary"
+            app:cornerRadius="@dimen/radius_2xl"
+            app:elevation="@dimen/elevation_lg"
+            app:icon="@drawable/ic_play"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart" />
+
+        <!-- Secondary Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:baselineAligned="false">
+
+            <!-- Tutorial Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTutorial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_3"
+                android:paddingVertical="@dimen/spacing_3"
+                android:text="@string/tutorial"
+                android:textSize="@dimen/text_xs"
+                android:textColor="@color/gray_700"
+                android:textStyle="bold"
+                android:background="@drawable/bg_white_rounded"
+                app:cornerRadius="@dimen/radius_xl"
+                app:elevation="@dimen/elevation_md"
+                app:icon="@drawable/ic_book_open"
+                app:iconTint="@color/gray_700"
+                app:iconGravity="top" />
+
+            <!-- High Score Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHighScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_3"
+                android:paddingVertical="@dimen/spacing_3"
+                android:text="@string/high_score"
+                android:textSize="@dimen/text_xs"
+                android:textColor="@color/gray_700"
+                android:textStyle="bold"
+                android:background="@drawable/bg_white_rounded"
+                app:cornerRadius="@dimen/radius_xl"
+                app:elevation="@dimen/elevation_md"
+                app:icon="@drawable/ic_trophy"
+                app:iconTint="@color/gray_700"
+                app:iconGravity="top" />
+
+            <!-- Settings Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="@dimen/spacing_3"
+                android:text="@string/settings"
+                android:textSize="@dimen/text_xs"
+                android:textColor="@color/gray_700"
+                android:textStyle="bold"
+                android:background="@drawable/bg_white_rounded"
+                app:cornerRadius="@dimen/radius_xl"
+                app:elevation="@dimen/elevation_md"
+                app:icon="@drawable/ic_settings"
+                app:iconTint="@color/gray_700"
+                app:iconGravity="top" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

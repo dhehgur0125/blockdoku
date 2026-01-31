@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cell with thin border on right only (last row) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    
+    <!-- Right border - thin gray -->
+    <item android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_200" />
+        </shape>
+    </item>
+</layer-list>

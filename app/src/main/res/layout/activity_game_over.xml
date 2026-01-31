@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_dark_bg"
+    android:id="@+id/game_over">
+
+    <!-- Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Modal Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/spacing_6"
+        app:cardCornerRadius="@dimen/radius_3xl"
+        app:cardElevation="@dimen/elevation_2xl"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_8"
+            android:gravity="center_horizontal">
+
+            <!-- Trophy Icon -->
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/gradient_trophy_bg"
+                android:layout_marginBottom="@dimen/spacing_4">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_trophy"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/trophy" />
+
+            </FrameLayout>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_over"
+                android:textSize="@dimen/text_3xl"
+                android:textColor="@color/gray_800"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/spacing_2" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good_job"
+                android:textSize="@dimen/text_sm"
+                android:textColor="@color/gray_600"
+                android:layout_marginBottom="@dimen/spacing_6" />
+
+            <!-- Score Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_6"
+                app:cardCornerRadius="@dimen/radius_2xl"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/purple_pink_gradient_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_6">
+
+                    <!-- Final Score -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/final_score"
+                        android:textSize="@dimen/text_sm"
+                        android:textColor="@color/gray_600"
+                        android:layout_marginBottom="@dimen/spacing_1" />
+
+                    <TextView
+                        android:id="@+id/txtFinalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="2,450"
+                        android:textSize="@dimen/text_5xl"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_4"
+                        android:textColor="@color/purple_600" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/purple_200"
+                        android:layout_marginBottom="@dimen/spacing_4" />
+
+                    <!-- Previous High Score and Average -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Previous High -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/previous_high"
+                                android:textSize="@dimen/text_xs"
+                                android:textColor="@color/gray_600" />
+
+                            <TextView
+                                android:id="@+id/txtPreviousHigh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3,890"
+                                android:textSize="@dimen/text_lg"
+                                android:textColor="@color/gray_700"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Average Score -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/average_score"
+                                android:textSize="@dimen/text_xs"
+                                android:textColor="@color/gray_600" />
+
+                            <TextView
+                                android:id="@+id/txtAverageScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1,820"
+                                android:textSize="@dimen/text_lg"
+                                android:textColor="@color/gray_700"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Play Again Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlayAgain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_large"
+                android:text="@string/play_again"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_button_primary"
+                app:cornerRadius="@dimen/radius_2xl"
+                app:elevation="@dimen/elevation_lg"
+                app:icon="@drawable/ic_rotate_ccw"
+                app:iconTint="@color/white"
+                app:iconGravity="textStart"
+                android:layout_marginBottom="@dimen/spacing_3" />
+
+            <!-- Secondary Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Home Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_3"
+                    android:paddingVertical="@dimen/spacing_3"
+                    android:text="@string/go_home"
+                    android:textColor="@color/gray_700"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_gray_100_rounded"
+                    app:cornerRadius="@dimen/radius_xl"
+                    app:icon="@drawable/ic_home"
+                    app:iconTint="@color/gray_700"
+                    app:iconGravity="textStart" />
+
+                <!-- Share Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/spacing_3"
+                    android:text="@string/share"
+                    android:textColor="@color/gray_700"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_gray_100_rounded"
+                    app:cornerRadius="@dimen/radius_xl"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="@color/gray_700"
+                    app:iconGravity="textStart" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
