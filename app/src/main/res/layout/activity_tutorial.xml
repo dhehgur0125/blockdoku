@@ -292,7 +292,7 @@
             android:layout_marginEnd="@dimen/spacing_3"
             android:text="@string/skip"
             android:textStyle="bold"
-            android:textColor="@color/gray_700"
+            android:textColor="@color/white"
             android:background="@drawable/bg_gray_200_rounded"
             app:cornerRadius="@dimen/radius_2xl" />
 
