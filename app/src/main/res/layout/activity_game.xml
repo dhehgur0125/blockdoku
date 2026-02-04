@@ -11,32 +11,35 @@
     <!-- Header Buttons -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHome"
+        style="@style/Widget.Material3.Button.Icon"
         android:layout_width="@dimen/icon_button_size"
         android:layout_height="@dimen/icon_button_size"
-        android:background="@drawable/bg_white_rounded"
-        app:cornerRadius="@dimen/radius_lg"
-        app:elevation="@dimen/elevation_md"
+        app:backgroundTint="@color/white"
         app:icon="@drawable/ic_home"
+        app:iconTint="@color/gray_700"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:iconTint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:iconSize="24dp"
+        app:cornerRadius="@dimen/radius_lg"
+        app:elevation="@dimen/elevation_md"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:contentDescription="@string/restart"
         android:id="@+id/btnRestart"
+        style="@style/Widget.Material3.Button.Icon"
         android:layout_width="@dimen/icon_button_size"
         android:layout_height="@dimen/icon_button_size"
-        android:background="@drawable/bg_white_rounded"
-        app:cornerRadius="@dimen/radius_lg"
-        app:elevation="@dimen/elevation_md"
+        app:backgroundTint="@color/white"
         app:icon="@drawable/ic_rotate_ccw"
+        app:iconTint="@color/gray_700"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:iconTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:iconSize="24dp"
+        app:cornerRadius="@dimen/radius_lg"
+        app:elevation="@dimen/elevation_md"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Score Board -->
     <LinearLayout
@@ -139,13 +142,21 @@
         app:layout_constraintBottom_toTopOf="@id/blockContainer"
         app:layout_constraintHeight_percent="0.5">
 
-        <!-- RecyclerView for 9x9 Grid -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvGameBoard"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/spacing_4"
-            android:clipToPadding="false" />
+        <!-- Grid Container with Background Lines -->
+        <FrameLayout
+            android:layout_width="324dp"
+            android:layout_height="324dp"
+            android:layout_gravity="center"
+            android:background="@drawable/grid_lines_9x9">
+
+            <!-- RecyclerView for 9x9 Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGameBoard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </FrameLayout>
 
     </androidx.cardview.widget.CardView>
 

@@ -59,10 +59,19 @@
                     android:padding="@dimen/spacing_4">
 
                     <!-- 9x9 Grid for Tutorial -->
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvTutorialBoard"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp" />
+                    <FrameLayout
+                        android:layout_width="324dp"
+                        android:layout_height="324dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/grid_lines_9x9">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvTutorialBoard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+
+                    </FrameLayout>
 
                     <!-- Floating Block -->
                     <androidx.cardview.widget.CardView
@@ -77,26 +86,7 @@
                         app:strokeColor="@color/purple_400"
                         app:strokeWidth="2dp">
 
-                        <androidx.gridlayout.widget.GridLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="@dimen/spacing_2"
-                            app:columnCount="2"
-                            app:rowCount="1">
 
-                            <View
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="1dp"
-                                android:background="@drawable/gradient_block_blue" />
-
-                            <View
-                                android:layout_width="32dp"
-                                android:layout_height="32dp"
-                                android:layout_margin="1dp"
-                                android:background="@drawable/gradient_block_blue" />
-
-                        </androidx.gridlayout.widget.GridLayout>
 
                     </androidx.cardview.widget.CardView>
 
@@ -292,8 +282,8 @@
             android:layout_marginEnd="@dimen/spacing_3"
             android:text="@string/skip"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:background="@drawable/bg_gray_200_rounded"
+            android:textColor="@color/gray_700"
+            app:backgroundTint="@color/gray_200"
             app:cornerRadius="@dimen/radius_2xl" />
 
         <!-- Next Button -->
@@ -305,10 +295,11 @@
             android:text="@string/next"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:background="@drawable/gradient_button_primary"
+            android:backgroundTint="@color/purple_600"
             app:cornerRadius="@dimen/radius_2xl"
             app:icon="@drawable/ic_arrow_right"
             app:iconTint="@color/white"
+            app:iconSize="20dp"
             app:iconGravity="end" />
 
     </LinearLayout>

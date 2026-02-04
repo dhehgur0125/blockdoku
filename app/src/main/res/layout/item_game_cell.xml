@@ -21,6 +21,9 @@ Border drawable options:
 - @drawable/cell_border_thick_bottom_only - Thick bottom border only (for last column)
 - @drawable/cell_border_none - No borders (for last row, last column corner)
 
+Cell Size: 36dp x 36dp (optimal for 9x9 grid on standard phone screens)
+Total grid size: ~324dp x 324dp (fits most screens with padding)
+
 Example Kotlin code for RecyclerView Adapter:
 ```kotlin
 fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -51,16 +54,15 @@ fun onBindViewHolder(holder: ViewHolder, position: Int) {
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cellContainer"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
     android:layout_margin="0dp">
 
     <!-- Empty Cell Background (set programmatically based on position) -->
     <View
         android:id="@+id/cellBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/cell_border_normal" />
+        android:layout_height="match_parent" />
 
     <!-- Filled Cell Background -->
     <View
@@ -84,7 +86,7 @@ fun onBindViewHolder(holder: ViewHolder, position: Int) {
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="8sp"
+            android:textSize="10sp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:text="5" />

@@ -21,7 +21,7 @@ class SplashActivity : ComponentActivity() {
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, GameActivity::class.java))
+            startActivity(Intent(this, tutorialActivity::class.java))
             finish() // 뒤로가기 방지
         }, 3000) // 3초
     }
