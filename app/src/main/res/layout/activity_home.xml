@@ -176,13 +176,13 @@
                 android:paddingVertical="@dimen/spacing_3"
                 android:text="@string/tutorial"
                 android:textSize="@dimen/text_xs"
-                android:textColor="@color/gray_700"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:background="@drawable/bg_white_rounded"
                 app:cornerRadius="@dimen/radius_xl"
                 app:elevation="@dimen/elevation_md"
                 app:icon="@drawable/ic_book_open"
-                app:iconTint="@color/gray_700"
+                app:iconTint="@color/white"
                 app:iconGravity="top" />
 
             <!-- High Score Button -->
@@ -195,13 +195,13 @@
                 android:paddingVertical="@dimen/spacing_3"
                 android:text="@string/high_score"
                 android:textSize="@dimen/text_xs"
-                android:textColor="@color/gray_700"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:background="@drawable/bg_white_rounded"
                 app:cornerRadius="@dimen/radius_xl"
                 app:elevation="@dimen/elevation_md"
                 app:icon="@drawable/ic_trophy"
-                app:iconTint="@color/gray_700"
+                app:iconTint="@color/white"
                 app:iconGravity="top" />
 
             <!-- Settings Button -->
@@ -213,13 +213,13 @@
                 android:paddingVertical="@dimen/spacing_3"
                 android:text="@string/settings"
                 android:textSize="@dimen/text_xs"
-                android:textColor="@color/gray_700"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:background="@drawable/bg_white_rounded"
                 app:cornerRadius="@dimen/radius_xl"
                 app:elevation="@dimen/elevation_md"
                 app:icon="@drawable/ic_settings"
-                app:iconTint="@color/gray_700"
+                app:iconTint="@color/white"
                 app:iconGravity="top" />
 
         </LinearLayout>
