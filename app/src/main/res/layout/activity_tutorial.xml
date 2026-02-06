@@ -58,20 +58,27 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/spacing_4">
 
-                    <!-- 9x9 Grid for Tutorial -->
+                    <!-- 9x9 Grid for Tutorial (Background Layer Only) -->
                     <FrameLayout
+                        android:id="@+id/boardContainer"
                         android:layout_width="324dp"
                         android:layout_height="324dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@drawable/grid_lines_9x9">
+                        android:layout_gravity="center_horizontal">
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rvTutorialBoard"
+                        <!-- Grid lines are drawn here -->
+                        <com.example.blockdoku.view.BoardGridView
+                            android:id="@+id/boardGrid"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/transparent" />
+                            android:layout_height="match_parent" />
+
+                        <!--
+                            ⚠️ 블럭들은 이 boardContainer 위에
+                            Activity 코드에서 addView()로 직접 배치됨
+                            (칸보다 작게, 띄워서)
+                        -->
 
                     </FrameLayout>
+
 
                     <!-- Floating Block -->
                     <androidx.cardview.widget.CardView
