@@ -80,7 +80,7 @@
                     android:id="@+id/txtCurrentScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1,250"
+                    android:text="0"
                     android:textSize="@dimen/text_2xl"
                     android:textColor="@color/purple_600"
                     android:textStyle="bold" />
@@ -116,7 +116,7 @@
                     android:id="@+id/txtHighScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3,890"
+                    android:text="0"
                     android:textSize="@dimen/text_2xl"
                     android:textColor="@color/pink_600"
                     android:textStyle="bold" />
@@ -127,7 +127,7 @@
 
     </LinearLayout>
 
-    <!-- Game Board - 9x9 Grid -->
+    <!-- Game Board Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/gameBoardCard"
         android:layout_width="match_parent"
@@ -142,19 +142,25 @@
         app:layout_constraintBottom_toTopOf="@id/blockContainer"
         app:layout_constraintHeight_percent="0.5">
 
-        <!-- Grid Container with Background Lines -->
+        <!-- Game Board Container -->
         <FrameLayout
+            android:id="@+id/gameBoardContainer"
             android:layout_width="324dp"
             android:layout_height="324dp"
-            android:layout_gravity="center"
-            android:background="@drawable/grid_lines_9x9">
+            android:layout_gravity="center">
 
-            <!-- RecyclerView for 9x9 Grid -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvGameBoard"
+            <!-- Grid Lines (Background Layer) -->
+            <com.example.blockdoku.view.BoardGridView
+                android:id="@+id/boardGrid"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent" />
+                android:layout_height="match_parent" />
+
+            <!--
+                동적으로 addView()
+                - 보라색 블록 (배치된 칸)
+                - 폭탄 블록
+                - 셀보다 작게 (30dp), 띄워서 배치
+            -->
 
         </FrameLayout>
 
@@ -187,6 +193,8 @@
                 android:id="@+id/block1Container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
                 android:padding="@dimen/spacing_3">
                 <!-- Block views will be added programmatically -->
             </FrameLayout>
@@ -207,6 +215,8 @@
                 android:id="@+id/block2Container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
                 android:padding="@dimen/spacing_3">
                 <!-- Block views will be added programmatically -->
             </FrameLayout>
@@ -226,6 +236,8 @@
                 android:id="@+id/block3Container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
                 android:padding="@dimen/spacing_3">
                 <!-- Block views will be added programmatically -->
             </FrameLayout>

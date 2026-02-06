@@ -15,65 +15,46 @@ data class BlockShape(
 
         /**
          * 1x1 단일 블록
-         * ■
          */
         val SINGLE = BlockShape(listOf(0 to 0))
 
         /**
          * 1x2 가로 블록
-         * ■■
          */
         val HORIZONTAL_2 = BlockShape(listOf(0 to 0, 0 to 1))
 
         /**
          * 2x1 세로 블록
-         * ■
-         * ■
          */
         val VERTICAL_2 = BlockShape(listOf(0 to 0, 1 to 0))
 
         /**
          * 1x3 가로 블록
-         * ■■■
          */
         val HORIZONTAL_3 = BlockShape(listOf(0 to 0, 0 to 1, 0 to 2))
 
         /**
          * 3x1 세로 블록
-         * ■
-         * ■
-         * ■
          */
         val VERTICAL_3 = BlockShape(listOf(0 to 0, 1 to 0, 2 to 0))
 
         /**
          * 1x4 가로 블록
-         * ■■■■
          */
         val HORIZONTAL_4 = BlockShape(listOf(0 to 0, 0 to 1, 0 to 2, 0 to 3))
 
         /**
          * 4x1 세로 블록
-         * ■
-         * ■
-         * ■
-         * ■
          */
         val VERTICAL_4 = BlockShape(listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0))
 
         /**
          * 1x5 가로 블록
-         * ■■■■■
          */
         val HORIZONTAL_5 = BlockShape(listOf(0 to 0, 0 to 1, 0 to 2, 0 to 3, 0 to 4))
 
         /**
          * 5x1 세로 블록
-         * ■
-         * ■
-         * ■
-         * ■
-         * ■
          */
         val VERTICAL_5 = BlockShape(listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0))
 
@@ -89,25 +70,10 @@ data class BlockShape(
             1 to 0, 1 to 1
         ))
 
-        /**
-         * 3x3 정사각형 블록
-         * ■■■
-         * ■■■
-         * ■■■
-         */
-        val SQUARE_3 = BlockShape(listOf(
-            0 to 0, 0 to 1, 0 to 2,
-            1 to 0, 1 to 1, 1 to 2,
-            2 to 0, 2 to 1, 2 to 2
-        ))
-
         // ==================== L자 블록 (4가지 회전) ====================
 
         /**
          * L자 블록 (기본)
-         * ■
-         * ■
-         * ■■
          */
         val L_SHAPE = BlockShape(listOf(
             0 to 0,
@@ -117,8 +83,6 @@ data class BlockShape(
 
         /**
          * L자 블록 (90도 회전)
-         * ■■■
-         * ■
          */
         val L_SHAPE_90 = BlockShape(listOf(
             0 to 0, 0 to 1, 0 to 2,
@@ -127,9 +91,6 @@ data class BlockShape(
 
         /**
          * L자 블록 (180도 회전)
-         * ■■
-         *  ■
-         *  ■
          */
         val L_SHAPE_180 = BlockShape(listOf(
             0 to 0, 0 to 1,
@@ -139,8 +100,6 @@ data class BlockShape(
 
         /**
          * L자 블록 (270도 회전)
-         *   ■
-         * ■■■
          */
         val L_SHAPE_270 = BlockShape(listOf(
             0 to 2,
@@ -151,9 +110,6 @@ data class BlockShape(
 
         /**
          * 역 L자 블록 (기본)
-         *  ■
-         *  ■
-         * ■■
          */
         val L_REVERSE = BlockShape(listOf(
             0 to 1,
@@ -163,8 +119,6 @@ data class BlockShape(
 
         /**
          * 역 L자 블록 (90도 회전)
-         * ■
-         * ■■■
          */
         val L_REVERSE_90 = BlockShape(listOf(
             0 to 0,
@@ -173,9 +127,6 @@ data class BlockShape(
 
         /**
          * 역 L자 블록 (180도 회전)
-         * ■■
-         * ■
-         * ■
          */
         val L_REVERSE_180 = BlockShape(listOf(
             0 to 0, 0 to 1,
@@ -185,8 +136,6 @@ data class BlockShape(
 
         /**
          * 역 L자 블록 (270도 회전)
-         * ■■■
-         *   ■
          */
         val L_REVERSE_270 = BlockShape(listOf(
             0 to 0, 0 to 1, 0 to 2,
@@ -197,8 +146,6 @@ data class BlockShape(
 
         /**
          * T자 블록 (기본)
-         * ■■■
-         *  ■
          */
         val T_SHAPE = BlockShape(listOf(
             0 to 0, 0 to 1, 0 to 2,
@@ -207,9 +154,6 @@ data class BlockShape(
 
         /**
          * T자 블록 (90도 회전)
-         *  ■
-         * ■■
-         *  ■
          */
         val T_SHAPE_90 = BlockShape(listOf(
             0 to 1,
@@ -219,8 +163,6 @@ data class BlockShape(
 
         /**
          * T자 블록 (180도 회전)
-         *  ■
-         * ■■■
          */
         val T_SHAPE_180 = BlockShape(listOf(
             0 to 1,
@@ -229,9 +171,6 @@ data class BlockShape(
 
         /**
          * T자 블록 (270도 회전)
-         * ■
-         * ■■
-         * ■
          */
         val T_SHAPE_270 = BlockShape(listOf(
             0 to 0,
@@ -243,8 +182,6 @@ data class BlockShape(
 
         /**
          * Z자 블록 (가로)
-         * ■■
-         *  ■■
          */
         val Z_SHAPE = BlockShape(listOf(
             0 to 0, 0 to 1,
@@ -253,9 +190,6 @@ data class BlockShape(
 
         /**
          * Z자 블록 (세로)
-         *  ■
-         * ■■
-         * ■
          */
         val Z_SHAPE_90 = BlockShape(listOf(
             0 to 1,
@@ -267,8 +201,6 @@ data class BlockShape(
 
         /**
          * 역 Z자 블록 (가로)
-         *  ■■
-         * ■■
          */
         val S_SHAPE = BlockShape(listOf(
             0 to 1, 0 to 2,
@@ -277,9 +209,6 @@ data class BlockShape(
 
         /**
          * 역 Z자 블록 (세로)
-         * ■
-         * ■■
-         *  ■
          */
         val S_SHAPE_90 = BlockShape(listOf(
             0 to 0,
@@ -291,8 +220,6 @@ data class BlockShape(
 
         /**
          * 작은 코너 블록
-         * ■■
-         * ■
          */
         val CORNER_SMALL = BlockShape(listOf(
             0 to 0, 0 to 1,
@@ -301,9 +228,6 @@ data class BlockShape(
 
         /**
          * 큰 코너 블록
-         * ■■■
-         * ■
-         * ■
          */
         val CORNER_LARGE = BlockShape(listOf(
             0 to 0, 0 to 1, 0 to 2,
@@ -315,9 +239,6 @@ data class BlockShape(
 
         /**
          * 작은 십자가
-         *  ■
-         * ■■■
-         *  ■
          */
         val CROSS_SMALL = BlockShape(listOf(
             0 to 1,
@@ -327,11 +248,7 @@ data class BlockShape(
 
         /**
          * 큰 십자가
-         *   ■
-         *   ■
-         * ■■■■■
-         *   ■
-         *   ■
+
          */
         val CROSS_LARGE = BlockShape(listOf(
             0 to 2,
@@ -352,7 +269,7 @@ data class BlockShape(
             HORIZONTAL_3, VERTICAL_3,
             HORIZONTAL_4, VERTICAL_4,
             HORIZONTAL_5, VERTICAL_5,
-            SQUARE_2, SQUARE_3,
+            SQUARE_2,
             L_SHAPE, L_SHAPE_90, L_SHAPE_180, L_SHAPE_270,
             L_REVERSE, L_REVERSE_90, L_REVERSE_180, L_REVERSE_270,
             T_SHAPE, T_SHAPE_90, T_SHAPE_180, T_SHAPE_270,
@@ -379,7 +296,7 @@ data class BlockShape(
         val MEDIUM_SHAPES = listOf(
             HORIZONTAL_3, VERTICAL_3,
             HORIZONTAL_4, VERTICAL_4,
-            SQUARE_2, SQUARE_3,
+            SQUARE_2,
             L_SHAPE, L_SHAPE_90,
             T_SHAPE, T_SHAPE_90,
             Z_SHAPE, S_SHAPE
@@ -391,7 +308,6 @@ data class BlockShape(
         val HARD_SHAPES = listOf(
             HORIZONTAL_4, VERTICAL_4,
             HORIZONTAL_5, VERTICAL_5,
-            SQUARE_3,
             L_SHAPE, L_SHAPE_90, L_SHAPE_180, L_SHAPE_270,
             L_REVERSE, L_REVERSE_90, L_REVERSE_180, L_REVERSE_270,
             T_SHAPE, T_SHAPE_90, T_SHAPE_180, T_SHAPE_270,
